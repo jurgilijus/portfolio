@@ -1,0 +1,37 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+li{
+    padding: 0rem 1rem;
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: #0a192f;
+    color: #d1d5db;
+    padding: 1rem;
+}
+.logo{
+    width: 8rem;
+}
+.menu-list{
+    display: flex;
+    list-style: none;
+    
+}
+.menu-mobile, .hambureer-btn{
+    display: none;
+ }
