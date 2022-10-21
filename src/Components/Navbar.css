@@ -12,16 +12,20 @@ li{
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --bg-color: #0a192f;
+    --text-color: #d1d5db;
+}
 .navbar{
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: 5rem;
-    background-color: #0a192f;
-    color: #d1d5db;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     padding: 1rem;
 }
 .logo{
@@ -29,9 +33,90 @@ li{
 }
 .menu-list{
     display: flex;
+    align-items: center;
     list-style: none;
-    
+    font-weight: bold;
 }
-.menu-mobile, .hambureer-btn{
-    display: none;
+.menu-list-hover:hover{
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 1.75rem 1rem;
+    font-weight: bold;
+}
+.menu-mobile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ .menu-mobile-list{
+    padding: 1.5rem 0rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+ }
+ .menu-mobile-list:hover{
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+ }
+ @media (max-width: 768px) {
+     .menu-list {
+         display: none;
+     }
+ }
+ .hamburger-btn {
+    font-size: 3rem;
+    z-index: 10;
+    cursor: pointer;
+ }
+ @media (min-width: 768px) {
+     .hamburger-btn, .menu-mobile {
+         display: none;
+     }
+ }
+ .social-icons{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: -100px;
+    top: 35%;
+ }
+ .social-icon{
+    color: var(--text-color);
+    height: 60px;
+    width: 160px;
+    background-color: #0A66C2;
+    display: flex;
+    align-items: center;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0.5rem;
+    box-shadow: 10px 7px 5px 0px rgba(0, 0, 0, 0.75);
+ }
+ .social-icon-text{
+    display: grid;
+    grid-template-columns: 100px 60px;
+    align-items: center;
+    font-weight: bold;
+ }
+ .social-icon:hover{
+    transition: 0.5s;
+    margin-left: 100px;
+ }
+ .git-color{
+    background-color: black;
+ }
+ .res-color{
+    background-color:#ee9453;
+ }
+ .mail-color{
+    background-color: #F74747;
  }
