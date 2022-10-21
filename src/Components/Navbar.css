@@ -88,6 +88,7 @@ li{
     position: fixed;
     left: -100px;
     top: 35%;
+    z-index: -10;
  }
  .social-icon{
     color: var(--text-color);
