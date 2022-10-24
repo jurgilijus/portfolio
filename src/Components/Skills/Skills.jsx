@@ -19,36 +19,36 @@ function Skills() {
         
         <div className='skills-items'>
             <div className='skills-item'>
-                <img src={html5} alt="HTML icon" className='skills-icon'/>
+                <img src={html5} alt="HTML5 icon" className='skills-icon'/>
                 <p className='skills-text'>HTML</p>
             </div>
             <div className='skills-item'>
                 <img src={css} alt="HTML icon" className='skills-icon'/>
-                <p className='skills-text'>HTML</p>
+                <p className='skills-text'>css</p>
             </div>
             <div className='skills-item'>
-                <img src={bootstrap} alt="HTML icon" className='skills-icon'/>
-                <p className='skills-text'>HTML</p>
+                <img src={bootstrap} alt="bootstrap icon" className='skills-icon'/>
+                <p className='skills-text'>bootstrap</p>
             </div>
             <div className='skills-item'>
-                <img src={firebase} alt="HTML icon" className='skills-icon'/>
-                <p className='skills-text'>HTML</p>
+                <img src={firebase} alt="firebase icon" className='skills-icon'/>
+                <p className='skills-text'>firebase</p>
             </div>
             <div className='skills-item'>
-                <img src={github} alt="HTML icon" className='skills-icon'/>
-                <p className='skills-text'>HTML</p>
+                <img src={github} alt="github icon" className='skills-icon'/>
+                <p className='skills-text'>github</p>
             </div>
             <div className='skills-item'>
-                <img src={javascript} alt="HTML icon" className='skills-icon'/>
-                <p className='skills-text'>HTML</p>
+                <img src={javascript} alt="javascript icon" className='skills-icon'/>
+                <p className='skills-text'>javascript</p>
             </div>
             <div className='skills-item'>
-                <img src={reactjs} alt="HTML icon" className='skills-icon'/>
-                <p className='skills-text'>HTML</p>
+                <img src={reactjs} alt="React icon" className='skills-icon'/>
+                <p className='skills-text'>React</p>
             </div>
             <div className='skills-item'>
-                <img src={tailwindcss} alt="HTML icon" className='skills-icon'/>
-                <p className='skills-text'>HTML</p>
+                <img src={tailwindcss} alt="tailwindcss icon" className='skills-icon'/>
+                <p className='skills-text'>tailwind css</p>
             </div>
         </div>
     </section>
