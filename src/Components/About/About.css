@@ -28,13 +28,14 @@ h4{
     text-align: center;
 }
 .about-text{
-    padding: 1rem 1rem 1rem 5rem;
-    display: flex;
+    padding: 1rem 2rem 1rem 5rem;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
     max-width: 1000px;
     gap: 0.5rem;
 }
 .about-text-intro{
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 @media only screen and (max-width:720px){

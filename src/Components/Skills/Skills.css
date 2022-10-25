@@ -23,7 +23,7 @@
     width: 6rem;
 }
 .skills-items{
-    /* margin-left: 4rem; */
+    padding: 1rem 0rem;
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(4, 1fr);
