@@ -3,6 +3,9 @@ import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 import Logo from '../Assets/64-64 white.net.png'
+import {Link} from 'react-scroll'
+import { navbarItems } from './NavbarItems'
+import Resume from '../Assets/Jurgis_Subačius_-_Junior_Software_Developer.pdf'
 
 // CSS
 import "./Navbar.css"
@@ -14,16 +17,21 @@ function Navbar() {
   return (
     <nav className='navbar'>
         <div>
-            <input type="image" className='logo' src={Logo} alt="Logo image" />
+            <Link to="home"  smooth={true} duration={500}>
+                <input type="image" className='logo' src={Logo} alt="Logo image" />
+            </Link>
+            
         </div>
         
         {/* Menu */}
             <ul className='menu-list'>
-                <li className='menu-list-hover'>Home</li>
-                <li className='menu-list-hover'>About</li>
-                <li className='menu-list-hover'>Skills</li>
-                <li className='menu-list-hover'>Work</li>
-                <li className='menu-list-hover'>Contact</li>
+                {navbarItems.map((navbarItem) => 
+                 <li key={navbarItem.id} className='menu-list-hover'>
+                <Link  to={navbarItem.to}  smooth={true} duration={500}>
+                    {navbarItem.title}
+                </Link>
+                </li>
+                )}
             </ul>
         
         {/* Hamburger */}
@@ -32,24 +40,27 @@ function Navbar() {
         </div>
         {/* Mobile menu */}
         <ul className={!nav ? 'hidden' : 'menu-mobile'}>
-            <li className='menu-mobile-list'>Home</li>
-            <li className='menu-mobile-list'>About</li>
-            <li className='menu-mobile-list'>Skills</li>
-            <li className='menu-mobile-list'>Work</li>
-            <li className='menu-mobile-list'>Contact</li>
+            {navbarItems.map((navbarItem) => 
+                 <li key={navbarItem.id} className='menu-mobile-list'>
+                <Link onClick={handleClick} to={navbarItem.to}  smooth={true} duration={500}>
+                    {navbarItem.title}
+                </Link>
+                </li>
+                )} 
         </ul>
         {/* Social icons */}
         <div className='social-icons'>
             <ul className='social-icon'>
-                <li><a className='social-icon-text' href="/">Linkedin <FaLinkedin size={30}/></a></li>
+                <li><a className='social-icon-text' href="https://www.linkedin.com/in/jurgis-suba%25C4%258Dius-5527056a/" target="_blank">Linkedin <FaLinkedin size={30}/></a></li>
             </ul>
             <ul className='social-icon git-color'>
-                <li><a className='social-icon-text' href="/">Github <FaGithub size={30}/></a></li>
+                <li><a className='social-icon-text' href="https://github.com/jurgilijus/portfolio.git" target="_blank">Github <FaGithub size={30}/></a></li>
             </ul>
-            <ul className='social-icon git-color res-color'>
-                <li><a className='social-icon-text' href="/">Resume <BsFillPersonLinesFill size={30}/></a></li>
-            </ul><ul className='social-icon git-color mail-color'>
-                <li><a className='social-icon-text' href="/">Email <HiOutlineMail size={30}/></a></li>
+            <ul className='social-icon res-color'>
+                <li><a className='social-icon-text' href={Resume} target="_blank">Resume <BsFillPersonLinesFill size={30}/></a></li>
+            </ul>
+            <ul className='social-icon mail-color'>
+                <li><Link className='social-icon-text' to="contact"  smooth={true} duration={500}>Email <HiOutlineMail size={30}/></Link></li>
             </ul>
         </div>
     </nav>

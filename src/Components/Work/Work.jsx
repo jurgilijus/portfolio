@@ -11,7 +11,7 @@ function Work() {
         <p>Check out some of my recent work</p>
         <div className='work-items'>
             <div className='work-conteiner'>
-                <input type="image" className='work-image' src={image} alt="ko nerodai blt?" />
+                <img className='work-image' src={image} alt="ko nerodai blt?" />
                     <div className='overlay'>
                         
                         <div className='text'>
@@ -32,7 +32,7 @@ function Work() {
                     </div>
             </div>
             <div className='work-conteiner'>
-                <input type="image" className='work-image' src={image} alt="ko nerodai blt?" />
+                <img className='work-image' src={image} alt="ko nerodai blt?" />
                     <div className='overlay'>
                         
                         <div className='text'>
@@ -53,7 +53,7 @@ function Work() {
                     </div>
             </div>
             <div className='work-conteiner'>
-                <input type="image" className='work-image' src={image} alt="ko nerodai blt?" />
+                <img className='work-image' src={image} alt="ko nerodai blt?" />
                     <div className='overlay'>
                         
                         <div className='text'>
@@ -74,69 +74,70 @@ function Work() {
                     </div>
             </div>
             <div className='work-conteiner'>
-            <input type="image" className='work-image' src={image} alt="ko nerodai blt?" />
-                <div className='overlay'>
-                    
-                    <div className='text'>
-                        <span>React JS Application</span>
-                        <div className='work-btn-location'>
-                        <a href="/">
-                            <button className='btn'>
-                                    Demo
-                            </button>
-                        </a>
-                        <a href="/">
-                            <button className='btn'>
-                                    Code
-                            </button>
-                        </a>
+                <img className='work-image' src={image} alt="ko nerodai blt?" />
+                    <div className='overlay'>
+                        
+                        <div className='text'>
+                            <span>React JS Application</span>
+                            <div className='work-btn-location'>
+                            <a href="/">
+                                <button className='btn'>
+                                        Demo
+                                </button>
+                            </a>
+                            <a href="/">
+                                <button className='btn'>
+                                        Code
+                                </button>
+                            </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-        </div>
-        <div className='work-conteiner'>
-            <input type="image" className='work-image' src={image} alt="ko nerodai blt?" />
-                <div className='overlay'>
-                    
-                    <div className='text'>
-                        <span>React JS Application</span>
-                        <div className='work-btn-location'>
-                        <a href="/">
-                            <button className='btn'>
-                                    Demo
-                            </button>
-                        </a>
-                        <a href="/">
-                            <button className='btn'>
-                                    Code
-                            </button>
-                        </a>
+            </div>
+            <div className='work-conteiner'>
+                <img className='work-image' src={image} alt="ko nerodai blt?" />
+                    <div className='overlay'>
+                        
+                        <div className='text'>
+                            <span>React JS Application</span>
+                            <div className='work-btn-location'>
+                            <a href="/">
+                                <button className='btn'>
+                                        Demo
+                                </button>
+                            </a>
+                            <a href="/">
+                                <button className='btn'>
+                                        Code
+                                </button>
+                            </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-        </div>
-        <div className='work-conteiner'>
-            <input type="image" className='work-image' src={image} alt="ko nerodai blt?" />
-                <div className='overlay'>
-                    
-                    <div className='text'>
-                        <span>React JS Application</span>
-                        <div className='work-btn-location'>
-                        <a href="/">
-                            <button className='btn'>
-                                    Demo
-                            </button>
-                        </a>
-                        <a href="/">
-                            <button className='btn'>
-                                    Code
-                            </button>
-                        </a>
+            </div>
+            <div className='work-conteiner'>
+                <img className='work-image' src={image} alt="ko nerodai blt?" />
+                    <div className='overlay'>
+                        
+                        <div className='text'>
+                            <span>React JS Application</span>
+                            <div className='work-btn-location'>
+                            <a href="/">
+                                <button className='btn'>
+                                        Demo
+                                </button>
+                            </a>
+                            <a href="/">
+                                <button className='btn'>
+                                        Code
+                                </button>
+                            </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+            </div>
         </div>
-        </div>
+        
     </section>
   )
 }
