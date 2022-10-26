@@ -9,9 +9,14 @@
     text-align: center;
     padding: 2rem 2rem 10rem 5rem;
 }
-.skills-header{
-    color: var(--text-color);
+@media only screen and (max-width:1024px) {
+    .skills {
+        height: 100%;
+    }
 }
+/* .skills-header{
+    color: var(--text-color);
+} */
 .skills-icon{
     width: 6rem;
 }
@@ -50,4 +55,7 @@
 .skills-text{
     font-weight: bold;
     text-transform: uppercase;
+}
+#light .skills {
+    background-color: var(--text-color);
 }

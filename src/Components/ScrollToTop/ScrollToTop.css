@@ -5,24 +5,21 @@
     --h1-color: #ccd6f6;
     --h2-color: #8892b0;
 }
-.theme-btn{
+.toTop-playsment{
     position: fixed;
-    top: 6rem;
     right: 2rem;
-}
-.sun{
-    color: var(--second-color);
+    bottom: 1rem;
     font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--second-color);
 }
-.sun:hover{
+.toTop-playsment:hover{
     filter: drop-shadow(5px 5px 5px rgba(236, 114, 114, 0.75));
     scale: 1.1;
 }
-.moon{
-    color:black;
-    font-size: 3.5rem;
-}
-.moon:hover {
+#light .toTop-playsment:hover{
     filter: drop-shadow(5px 5px 5px black);
-    scale: 1.1;
+}
+#light .toTop-playsment {
+    color: black;
 }

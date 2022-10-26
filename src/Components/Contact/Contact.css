@@ -15,6 +15,7 @@
     flex-direction: column;
     padding: 3rem 1rem 3rem 4rem;
 }
+
 .contact-text{
     text-align: center;
 }
@@ -28,8 +29,15 @@
     padding: 0.5rem;
     box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
     background-color: var(--h1-color);
+    opacity: 0.8;
 }
 .btn-aligne{
     max-width: 11rem;
     margin: auto;
+}
+#light .contact {
+    background-color: var(--text-color);
+}
+#light p, h4 {
+    color: var(--bg-color);
 }

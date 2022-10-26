@@ -9,6 +9,11 @@
     flex-direction: column;
     padding: 3rem 0rem;
 }
+@media only screen and (max-width:1024px) {
+    .work {
+        height: 100%;
+    }
+}
 .work-items{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -70,4 +75,7 @@
     .work-items {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+#light .work {
+    background-color: var(--text-color);
 }

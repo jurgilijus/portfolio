@@ -1,8 +1,14 @@
+:root {
+    --bg-color: #0a192f;
+    --text-color: #d1d5db;
+    --second-color: #e64e4e;
+    --h1-color: #ccd6f6;
+    --h2-color: #8892b0;
+}
 .home{
     width: 100%;
     height: 100vh;
     background-color: var(--bg-color);
-    z-index: -10;
 }
 .home-section{
     display: flex;
@@ -15,7 +21,7 @@
     padding: 0rem 2rem 3rem 4.5rem;
 }
 .introduction{
-    color: var(--second-color);
+    color: var(--second-color) !important;
 }
 h1, h2{
     font-size: 2.25rem;
@@ -44,8 +50,9 @@ p{
     align-items: center;
     color: white;
     border: 2px solid white;
-    padding: 1rem 2.25rem;
+    padding: 1rem 2rem;
     border-radius: 10px;
+    font-weight: bold;
 }
 .btn:hover{
     background-color: var(--second-color);
@@ -60,4 +67,17 @@ p{
 .arrow-efect:hover{
     transition: 0.5s;
     transform: rotate(90deg);
+}
+#light .home {
+    background-color: var(--text-color);
+}
+#light h1 {
+    color: var(--bg-color);
+}
+#light .btn{
+    border: 2px solid var(--second-color);
+    color: var(--second-color);
+}
+#light .btn:hover {
+    color: var(--text-color);
 }
