@@ -1,21 +1,44 @@
+import { useFormik } from 'formik'
 import React from 'react'
 
 // CSS
 import './Contact.css'
+import { contactSchema } from './Schemas'
+
+const onSubmit = () => {
+  console.log("submitted");
+}
 
 function Contact() {
+  const {values, errors, touched, handleBlur, handleChange, handleSubmit} = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      message: ''
+    },
+    validationSchema: contactSchema,
+    onSubmit
+})
+
+console.log(errors);
+  
   return (
     <section name='contact' className='contact'>
-        <form action="">
+        <form onSubmit={handleSubmit} action="">
             <div className='contact-text'>
                 <h4>Contact</h4>
                 <p>Submit the form below or shoot me an email - jurgissubciusgmail.com</p>
             </div>
+            
             <div className='contact-form'>
-            <input className='contact-form-inputs' type="text" placeholder='Enter your name' name='name'/><br />
-            <input className='contact-form-inputs' type="email" placeholder='Enter your email' name='email'/><br />
-            <textarea className='contact-form-inputs' placeholder='Enter your text' name='message' rows="10"/><br />
-            <button className='btn btn-aligne'> Contact me!!!</button>
+            <input className={errors.name && touched.name ? "contact-form-inputs" : "input-error contact-form-inputs"} value={values.name} onChange={handleChange} onBlur={handleBlur} type="text" placeholder='Enter your name' name='name'/>
+            {errors.name && touched.name && <p className='error'>{errors.name}</p>}<br />
+            
+            <input className={errors.name && touched.name ? "contact-form-inputs" : "input-error contact-form-inputs"} value={values.email} onChange={handleChange} onBlur={handleBlur} type="email" placeholder='Enter your email' name='email'/> {errors.email && touched.email && <p className='error'>{errors.email}</p>}<br />
+            
+            <textarea className={errors.name && touched.name ? "contact-form-inputs" : "input-error contact-form-inputs"} value={values.message} onChange={handleChange} onBlur={handleBlur} placeholder='Enter your text' name='message' rows="10"/> {errors.message && touched.message && <p className='error'>{errors.message}</p>}<br />
+            
+            <button className='btn btn-aligne' type='submit'> Contact me!!!</button>
             </div>
         </form>
     </section>

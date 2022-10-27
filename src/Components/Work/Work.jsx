@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../../Assets/pexels-tranmautritam-251225.jpg'
+import { workItems } from './WorkItems'
 
 // CSS
 import './Work.css'
@@ -10,134 +10,31 @@ function Work() {
         <h4>Work</h4>
         <p>Check out some of my recent work</p>
         <div className='work-items'>
-            <div className='work-conteiner'>
-                <img className='work-image' src={image} alt="ko nerodai blt?" />
-                    <div className='overlay'>
-                        
-                        <div className='text'>
-                            <span>React JS Application</span>
-                            <div className='work-btn-location'>
-                            <a href="/">
-                                <button className='btn'>
-                                        Demo
-                                </button>
-                            </a>
-                            <a href="/">
-                                <button className='btn'>
-                                        Code
-                                </button>
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <div className='work-conteiner'>
-                <img className='work-image' src={image} alt="ko nerodai blt?" />
-                    <div className='overlay'>
-                        
-                        <div className='text'>
-                            <span>React JS Application</span>
-                            <div className='work-btn-location'>
-                            <a href="/">
-                                <button className='btn'>
-                                        Demo
-                                </button>
-                            </a>
-                            <a href="/">
-                                <button className='btn'>
-                                        Code
-                                </button>
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <div className='work-conteiner'>
-                <img className='work-image' src={image} alt="ko nerodai blt?" />
-                    <div className='overlay'>
-                        
-                        <div className='text'>
-                            <span>React JS Application</span>
-                            <div className='work-btn-location'>
-                            <a href="/">
-                                <button className='btn'>
-                                        Demo
-                                </button>
-                            </a>
-                            <a href="/">
-                                <button className='btn'>
-                                        Code
-                                </button>
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <div className='work-conteiner'>
-                <img className='work-image' src={image} alt="ko nerodai blt?" />
-                    <div className='overlay'>
-                        
-                        <div className='text'>
-                            <span>React JS Application</span>
-                            <div className='work-btn-location'>
-                            <a href="/">
-                                <button className='btn'>
-                                        Demo
-                                </button>
-                            </a>
-                            <a href="/">
-                                <button className='btn'>
-                                        Code
-                                </button>
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <div className='work-conteiner'>
-                <img className='work-image' src={image} alt="ko nerodai blt?" />
-                    <div className='overlay'>
-                        
-                        <div className='text'>
-                            <span>React JS Application</span>
-                            <div className='work-btn-location'>
-                            <a href="/">
-                                <button className='btn'>
-                                        Demo
-                                </button>
-                            </a>
-                            <a href="/">
-                                <button className='btn'>
-                                        Code
-                                </button>
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <div className='work-conteiner'>
-                <img className='work-image' src={image} alt="ko nerodai blt?" />
-                    <div className='overlay'>
-                        
-                        <div className='text'>
-                            <span>React JS Application</span>
-                            <div className='work-btn-location'>
-                            <a href="/">
-                                <button className='btn'>
-                                        Demo
-                                </button>
-                            </a>
-                            <a href="/">
-                                <button className='btn'>
-                                        Code
-                                </button>
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
+        {workItems.map((workItem) =>
         
+            <div key={workItem.id} className='work-conteiner'>
+                <img className='work-image' src={workItem.image} alt={workItem.alt} />
+                    <div className='overlay'>
+                        
+                        <div className='text'>
+                            <span>{workItem.title}</span>
+                            <div className='work-btn-location'>
+                            <a href={workItem.hrefDemo}>
+                                <button className='btn'>
+                                        Demo
+                                </button>
+                            </a>
+                            <a href={workItem.hrefCode}>
+                                <button className='btn'>
+                                        Code
+                                </button>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        )}
+        </div>  
     </section>
   )
 }
