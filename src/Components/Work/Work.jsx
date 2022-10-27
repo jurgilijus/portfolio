@@ -13,7 +13,7 @@ function Work() {
         {workItems.map((workItem) =>
         
             <div key={workItem.id} className='work-conteiner'>
-                <img className='work-image' src={workItem.image} alt={workItem.alt} />
+                <img className='work-image' src={workItem.image} alt={workItem.alt} loading='lazy'/>
                     <div className='overlay'>
                         
                         <div className='text'>

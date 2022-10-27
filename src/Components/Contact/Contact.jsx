@@ -1,42 +1,51 @@
 import { useFormik } from 'formik'
-import React from 'react'
+import React, {useRef} from 'react'
+import emailjs from '@emailjs/browser'
 
 // CSS
 import './Contact.css'
 import { contactSchema } from './Schemas'
 
-const onSubmit = () => {
-  console.log("submitted");
-}
-
 function Contact() {
-  const {values, errors, touched, handleBlur, handleChange, handleSubmit} = useFormik({
+  
+  const form = useRef()
+  
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_uj608wv', 'template_43naxb1', form.current, 'aIt8uauSZSCSwJ9It')
+      .then((result) => {
+          alert('Your message has been submitted');
+      }, (error) => {
+          alert(error.message);
+      });
+      resetForm()
+  }
+  
+  const {values,resetForm, errors, touched, handleBlur, handleChange} = useFormik({
     initialValues: {
       name: '',
       email: '',
       message: ''
     },
     validationSchema: contactSchema,
-    onSubmit
 })
-
-console.log(errors);
   
   return (
     <section name='contact' className='contact'>
-        <form onSubmit={handleSubmit} action="">
+        <form ref={form} onSubmit={sendEmail} id='Form' action="">
             <div className='contact-text'>
                 <h4>Contact</h4>
                 <p>Submit the form below or shoot me an email - jurgissubciusgmail.com</p>
             </div>
             
             <div className='contact-form'>
-            <input className={errors.name && touched.name ? "contact-form-inputs" : "input-error contact-form-inputs"} value={values.name} onChange={handleChange} onBlur={handleBlur} type="text" placeholder='Enter your name' name='name'/>
+            <input className={errors.name && touched.name ? "contact-form-inputs input-error" : " contact-form-inputs"} value={values.name} onChange={handleChange} onBlur={handleBlur} type="text" placeholder='Enter your name' name='name'/>
             {errors.name && touched.name && <p className='error'>{errors.name}</p>}<br />
             
-            <input className={errors.name && touched.name ? "contact-form-inputs" : "input-error contact-form-inputs"} value={values.email} onChange={handleChange} onBlur={handleBlur} type="email" placeholder='Enter your email' name='email'/> {errors.email && touched.email && <p className='error'>{errors.email}</p>}<br />
+            <input className={errors.name && touched.name ? " contact-form-inputs input-error" : " contact-form-inputs"} value={values.email} onChange={handleChange} onBlur={handleBlur} type="email" placeholder='Enter your email' name='email'/> {errors.email && touched.email && <p className='error'>{errors.email}</p>}<br />
             
-            <textarea className={errors.name && touched.name ? "contact-form-inputs" : "input-error contact-form-inputs"} value={values.message} onChange={handleChange} onBlur={handleBlur} placeholder='Enter your text' name='message' rows="10"/> {errors.message && touched.message && <p className='error'>{errors.message}</p>}<br />
+            <textarea className={errors.name && touched.name ? " contact-form-inputs input-error" : " contact-form-inputs"} value={values.message} onChange={handleChange} onBlur={handleBlur} placeholder='Enter your text' name='message' rows="10"/> {errors.message && touched.message && <p className='error'>{errors.message}</p>}<br />
             
             <button className='btn btn-aligne' type='submit'> Contact me!!!</button>
             </div>

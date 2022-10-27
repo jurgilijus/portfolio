@@ -13,7 +13,7 @@ function Skills() {
         <div className='skills-items'>
             {skillsItems.map((skillsItem) =>
              <div key={skillsItem.id} className='skills-item'>
-                <img src={skillsItem.image} alt={skillsItem.alt} className='skills-icon'/>
+                <img src={skillsItem.image} alt={skillsItem.alt} className='skills-icon' loading='lazy'/>
                 <p className='skills-text'>{skillsItem.title}</p>
             </div>
             )}
