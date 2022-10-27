@@ -59,6 +59,17 @@ p{
     border: 2px solid var(--second-color);
     box-shadow: 6px 5px 5px 0px rgba(236, 114, 114, 0.75);
 }
+.name-aligment{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.effect:hover{
+    position: relative;
+    top: -1rem;
+    color: var(--second-color);
+    transition: 0.5s;
+}
 @media only screen and (max-width:280px) {
     .btn {
         padding: 0.5rem 1.25rem;

@@ -1,6 +1,7 @@
 import React from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import { Link } from 'react-scroll'
+import { nameElements } from './NameElements'
 
 // CSS
 import './Home.css'
@@ -10,7 +11,11 @@ function Home() {
     <section name="home" className='home'>
         <div className='home-section'>
           <p className='introduction'>Hi, my name is</p>
-          <h1>Jurgis Subačius</h1>
+          <h1 className='name-aligment' >
+          {nameElements.map((namElement) =>
+           <span className='effect' key={namElement.id}>{namElement.letter}</span>
+          )}
+          </h1>
           <h2>I'm a front-end developer.</h2>
           <p>I'm front end developer specializing in building exceptional digital experiences. Currently, i'm focused on building responsive web applications.</p>
           <div>
