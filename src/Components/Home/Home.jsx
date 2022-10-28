@@ -7,6 +7,7 @@ import { nameElements } from './NameElements'
 import './Home.css'
 
 function Home() {
+  
   return (
     <section name="home" className='home'>
         <div className='home-section'>
@@ -16,7 +17,9 @@ function Home() {
            <span className='effect' key={namElement.id}>{namElement.letter}</span>
           )}
           </h1>
-          <h2>I'm a front-end developer.</h2>
+          <h2>
+            I'm a front-end developer.
+          </h2>
           <p>I'm front end developer specializing in building exceptional digital experiences. Currently, i'm focused on building responsive web applications.</p>
           <div>
             <Link to="work" smooth={true} duration={500}>
