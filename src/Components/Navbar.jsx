@@ -14,7 +14,7 @@ function Navbar() {
     const handleClick = () => setNav(!nav)
     
   return (
-    <nav className='navbar'>
+    <nav  className='navbar'>
         <div>
             <Link to="home"  smooth={true} duration={500}>
                 <input type="image" className='logo' src={Logo} alt="Logo image" />

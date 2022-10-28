@@ -8,11 +8,16 @@
     align-items: center;
     flex-direction: column;
     padding: 3rem 0rem;
+    text-align: center;
 }
 @media only screen and (max-width:1024px) {
     .work {
         height: 100%;
     }
+}
+.work-p{
+    padding-left: 2.5rem;
+    padding-right: 1rem;
 }
 .work-items{
     display: grid;

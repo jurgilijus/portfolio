@@ -23,7 +23,7 @@ function Work() {
   return (
     <section name='work' className='work'>
         <h4>Work</h4>
-        <p>Check out some of my recent work</p>
+        <p className='work-p'>Check out some of my recent work</p>
         <motion.div ref={ref}
                 variants={showVariant}
                 initial="hidden"
