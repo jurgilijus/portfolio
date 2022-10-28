@@ -21,11 +21,7 @@ function About() {
   const [ref, inView] = useInView(false)
   
   useEffect(() => {
-    if (inView) {
-      control.start("initial");
-    } else {
-      control.start("animate");
-    }
+    inView ? control.start("initial") : control.start("animate")
   }, [control, inView]);
   
   return (

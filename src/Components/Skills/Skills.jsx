@@ -17,11 +17,7 @@ function Skills() {
   const [ref, inView] = useInView(false)
   
   useEffect(() => {
-    if (inView) {
-      control.start("initial");
-    } else {
-      control.start("animate");
-    }
+    inView ? control.start("initial") : control.start("animate")
   }, [control, inView]);
   
   return (
@@ -30,17 +26,17 @@ function Skills() {
       <h4>Skills</h4>
       <p>These are the technologies I've worked with</p>
         
-      <div className='skills-items'>
+      <motion.div ref={ref}
+            variants={showVariant}
+            initial="hidden"
+            animate={control} className='skills-items'>
         {skillsItems.map((skillsItem) =>
-          <motion.div ref={ref}
-                      variants={showVariant}
-                      initial="hidden"
-                      animate={control} key={skillsItem.id} className='skills-item'>
+          <div key={skillsItem.id} className='skills-item'>
             <img src={skillsItem.image} alt={skillsItem.alt} className='skills-icon' loading='lazy'/>
             <p className='skills-text'>{skillsItem.title}</p>
-          </motion.div>
+          </div>
         )}
-      </div>
+      </motion.div>
     </section>
   )
 }

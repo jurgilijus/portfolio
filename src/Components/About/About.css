@@ -25,11 +25,13 @@ h4{
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 1000px;
-    gap: 0.5rem;
+    gap: 2rem;
+    text-align: justify;
 }
 .about-text-intro{
     font-size: 2.5rem;
     font-weight: bold;
+    /* padding-right: 1rem; */
 }
 @media only screen and (max-width:720px){
     .about-text {

@@ -34,6 +34,7 @@ form{
     box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
     background-color: var(--h1-color);
     opacity: 0.8;
+    font-weight: bold;
 }
 .error{
     color: red;

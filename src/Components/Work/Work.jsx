@@ -17,24 +17,20 @@ function Work() {
     const [ref, inView] = useInView(false)
     
     useEffect(() => {
-        if (inView) {
-        control.start("initial");
-        } else {
-        control.start("animate");
-        }
+        inView ? control.start("initial") : control.start("animate")
     }, [control, inView]);
     
   return (
     <section name='work' className='work'>
         <h4>Work</h4>
         <p>Check out some of my recent work</p>
-        <div className='work-items'>
+        <motion.div ref={ref}
+                variants={showVariant}
+                initial="hidden"
+                animate={control} className='work-items'>
         {workItems.map((workItem) =>
         
-            <motion.div ref={ref}
-                      variants={showVariant}
-                      initial="hidden"
-                      animate={control} key={workItem.id} className='work-conteiner'>
+            <div key={workItem.id} className='work-conteiner'>
                 <img className='work-image' src={workItem.image} alt={workItem.alt} loading='lazy'/>
                     <div className='overlay'>
                         
@@ -54,9 +50,9 @@ function Work() {
                             </div>
                         </div>
                     </div>
-            </motion.div>
+            </div>
         )}
-        </div>  
+        </motion.div>  
     </section>
   )
 }
