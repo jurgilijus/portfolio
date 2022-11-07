@@ -35,11 +35,10 @@
     width: 5rem;
 }
 .popup-text{
+    font-size: 1rem;
     text-align: justify;
-    overflow:visible;
     white-space: pre-wrap;
     max-width: 60ch;
-    line-height: 1.6;
 }
 .popup-title{
     color: var(--text-color) !important;
@@ -54,4 +53,9 @@
 }
 .popup-close:hover{
     filter: drop-shadow(5px 5px 5px rgba(236, 114, 114, 0.75));
+}
+@media only screen and (min-width:1150px) {
+    .popup-conteiner {
+        overflow-y: hidden;
+    }
 }
