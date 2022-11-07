@@ -1,10 +1,11 @@
 import { useFormik } from 'formik'
 import React, {useRef} from 'react'
 import emailjs from '@emailjs/browser'
+import { contactSchema } from './Schemas'
 
 // CSS
 import './Contact.css'
-import { contactSchema } from './Schemas'
+
 
 function Contact() {
   

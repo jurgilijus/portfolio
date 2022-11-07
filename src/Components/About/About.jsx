@@ -26,7 +26,7 @@ function About() {
   
   return (
     <section name='about' className='about'>
-        <div className='about-content'>
+        <div>
             <h4 className='text-4xl'>About</h4>
             <div className='about-text'>
                 <motion.p ref={ref}
