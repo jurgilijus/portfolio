@@ -59,3 +59,10 @@
         overflow-y: hidden;
     }
 }
+@media only screen and (max-width:480px) {
+    .popup-conteiner {
+        margin-left: 0.5rem;
+        padding-right: 0.5rem;
+        min-width: 75%;
+    }
+}
