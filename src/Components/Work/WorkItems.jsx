@@ -1,4 +1,10 @@
-import image from '../../Assets/pexels-tranmautritam-251225.jpg'
+import FoodMain from '../../Assets/food-app/foodapp2.PNG'
+import category from '../../Assets/food-app/category.PNG'
+import search from '../../Assets/food-app/search.PNG'
+import mainPage from '../../Assets/comfy-house/mainpage.PNG'
+import app from '../../Assets/comfy-house/products.PNG'
+import appComponent from '../../Assets/comfy-house/shopingcart.PNG'
+import moderNav from '../../Assets/ModernNav/modernNav.PNG'
 
 // CSS
 import './Work.css'
@@ -7,50 +13,31 @@ import './Work.css'
 export const workItems = [
     {
         id: 1,
-        image: [image],
-        alt: 'ko nerodai blt?',
+        image: [FoodMain],
+        iconI: [category],
+        iconII: [search],
+        alt: 'Food-app main page image',
         title: 'React JS Application',
         hrefDemo: '/',
-        hrefCode: '/'
+        hrefCode: 'https://github.com/jurgilijus/food-app.git'
     },
     {
         id: 2,
-        image: [image],
-        alt: 'ko nerodai blt?',
-        title: 'React JS Application',
+        image: [mainPage],
+        iconI: [app],
+        iconII: [appComponent],
+        alt: 'Comfy house shop page',
+        title: 'JS Application',
         hrefDemo: '/',
-        hrefCode: '/'
+        hrefCode: 'https://github.com/jurgilijus/Comfyhouse-project.git'
     },
     {
         id: 3,
-        image: [image],
-        alt: 'ko nerodai blt?',
-        title: 'React JS Application',
-        hrefDemo: '/',
-        hrefCode: '/'
-    },
-    {
-        id: 4,
-        image: [image],
-        alt: 'ko nerodai blt?',
-        title: 'React JS Application',
-        hrefDemo: '/',
-        hrefCode: '/'
-    },
-    {
-        id: 5,
-        image: [image],
-        alt: 'ko nerodai blt?',
-        title: 'React JS Application',
-        hrefDemo: '/',
-        hrefCode: '/'
-    },
-    {
-        id: 6,
-        image: [image],
-        alt: 'ko nerodai blt?',
-        title: 'React JS Application',
-        hrefDemo: '/',
-        hrefCode: '/'
+        image: [moderNav],
+        iconI: [],
+        iconII: [],
+        alt: 'Moder Navbar',
+        title: 'JS, HTML and CSS',
     }
+    
 ]

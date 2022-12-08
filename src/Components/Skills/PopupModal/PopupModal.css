@@ -27,7 +27,7 @@
     height: 100%;
     /* background-color: rgba(0,0,0,0.7); */
     background-color: var(--text-color);
-    overflow: hidden;
+    z-index: 10;
 }
 .popup-icon{
     float: left;
@@ -50,6 +50,18 @@
     font-size: 2rem;
     font-weight: bold;
     color: var(--second-color);
+}
+.popup-conteiner::-webkit-scrollbar{
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--h2-color);
+    width: 8px;
+}
+.popup-conteiner::-webkit-scrollbar-thumb {
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--second-color);
+}
+.popup-conteiner::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(221, 71, 71, 0.75);
 }
 .popup-close:hover{
     filter: drop-shadow(5px 5px 5px rgba(236, 114, 114, 0.75));

@@ -2,7 +2,6 @@ import { useFormik } from 'formik'
 import React, {useRef} from 'react'
 import emailjs from '@emailjs/browser'
 import { contactSchema } from './Schemas'
-
 // CSS
 import './Contact.css'
 
@@ -13,10 +12,10 @@ function Contact() {
   
   const sendEmail = async (e) => {
     e.preventDefault();
-
+    // const serviceId = REACT_APP_YOUR_SERVICE_ID
     emailjs.sendForm('service_uj608wv', 'template_43naxb1', form.current, 'aIt8uauSZSCSwJ9It')
-      .then((result) => {
-          alert('Your message has been submitted');
+      .then(() => {
+          alert('Your message has been sent');
       }, (error) => {
           alert(error.message);
       });
