@@ -25,13 +25,13 @@ function WorkPopupModal(props) {
               <ul onClick={() => handleImageChange(image)}>
                 <img
                   src={image}
-                  className={image === null ? "empty" : " workpopup-img"}
+                  className={!image ? "empty" : " workpopup-img"}
                   alt=""
                 />
               </ul>
               <ul onClick={() => handleImageChange(iconI)}>
                 <img
-                  className={iconI === null ? "empty" : " workpopup-img"}
+                  className={!iconI ? "empty" : " workpopup-img"}
                   src={iconI}
                   alt=""
                 />
@@ -39,7 +39,7 @@ function WorkPopupModal(props) {
               <ul onClick={() => handleImageChange(iconII)}>
                 <img
                   src={iconII}
-                  className={iconII === null ? "empty" : " workpopup-img"}
+                  className={!iconII ? "empty" : " workpopup-img"}
                   alt=""
                 />
               </ul>

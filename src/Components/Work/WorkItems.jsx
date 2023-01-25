@@ -33,8 +33,8 @@ export const workItems = [
   {
     id: 3,
     image: [moderNav],
-    iconI: null,
-    iconII: null,
+    iconI: "",
+    iconII: "",
     alt: "Modern Navbar",
     title: "JS, HTML and CSS",
   },
