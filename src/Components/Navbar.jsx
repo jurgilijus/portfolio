@@ -14,7 +14,7 @@ function Navbar() {
   const handleClick = () => setNav(!nav);
 
   return (
-    <nav className="navbar">
+    <header className="navbar">
       <div>
         <Link to="home" smooth={true} duration={500}>
           <input type="image" className="logo" src={Logo} alt="Logo image" />
@@ -22,23 +22,23 @@ function Navbar() {
       </div>
 
       {/* Menu */}
-      <ul className="menu-list">
+      <nav className="menu-list">
         {navbarItems.map((navbarItem) => (
-          <li key={navbarItem.id} className="menu-list-hover">
+          <div key={navbarItem.id} className="menu-list-hover">
             <Link to={navbarItem.to} smooth={true} duration={500}>
               {navbarItem.title}
             </Link>
-          </li>
+          </div>
         ))}
-      </ul>
+      </nav>
       {/* Hamburger */}
       <div onClick={handleClick} className="hamburger-btn">
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
       {/* Mobile menu */}
-      <ul className={!nav ? "hidden" : "menu-mobile"}>
+      <nav className={!nav ? "hidden" : "menu-mobile"}>
         {navbarItems.map((navbarItem) => (
-          <li key={navbarItem.id} className="menu-mobile-list">
+          <div key={navbarItem.id} className="menu-mobile-list">
             <Link
               onClick={handleClick}
               to={navbarItem.to}
@@ -47,9 +47,9 @@ function Navbar() {
             >
               {navbarItem.title}
             </Link>
-          </li>
+          </div>
         ))}
-      </ul>
+      </nav>
       {/* Social icons */}
       <div className="social-icons">
         {navbarSocialItems.map((navbarSocialItem) => (
@@ -79,7 +79,7 @@ function Navbar() {
           </li>
         </ul>
       </div>
-    </nav>
+    </header>
   );
 }
 
