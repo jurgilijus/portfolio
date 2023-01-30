@@ -48,6 +48,7 @@ li {
 .menu-list-hover {
   padding: 0rem 1rem;
   cursor: pointer;
+  transition: all 0.3s;
 }
 .menu-list-hover:hover {
   background-color: var(--text-color);
