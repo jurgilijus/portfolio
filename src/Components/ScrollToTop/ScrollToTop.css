@@ -1,25 +1,26 @@
 :root {
-    --bg-color: #0a192f;
-    --text-color: #d1d5db;
-    --second-color: #e64e4e;
-    --h1-color: #ccd6f6;
-    --h2-color: #8892b0;
+  --bg-color: #0a192f;
+  --text-color: #d1d5db;
+  --second-color: #e64e4e;
+  --h1-color: #ccd6f6;
+  --h2-color: #8892b0;
 }
-.toTop-playsment{
-    position: fixed;
-    right: 2rem;
-    bottom: 1rem;
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: var(--second-color);
+.toTop-playsment {
+  position: fixed;
+  right: 2rem;
+  bottom: 1rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--second-color);
+  transition: all 0.3s;
 }
-.toTop-playsment:hover{
-    filter: drop-shadow(5px 5px 5px rgba(236, 114, 114, 0.75));
-    scale: 1.1;
+.toTop-playsment:hover {
+  filter: drop-shadow(5px 5px 5px rgba(236, 114, 114, 0.75));
+  transform: scale(1.1);
 }
-#light .toTop-playsment:hover{
-    filter: drop-shadow(5px 5px 5px black);
+#light .toTop-playsment:hover {
+  filter: drop-shadow(5px 5px 5px black);
 }
 #light .toTop-playsment {
-    color: black;
+  color: black;
 }

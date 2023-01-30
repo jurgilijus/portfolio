@@ -1,28 +1,30 @@
 :root {
-    --bg-color: #0a192f;
-    --text-color: #d1d5db;
-    --second-color: #e64e4e;
-    --h1-color: #ccd6f6;
-    --h2-color: #8892b0;
+  --bg-color: #0a192f;
+  --text-color: #d1d5db;
+  --second-color: #e64e4e;
+  --h1-color: #ccd6f6;
+  --h2-color: #8892b0;
 }
-.theme-btn{
-    position: fixed;
-    top: 6rem;
-    right: 2rem;
+.theme-btn {
+  position: fixed;
+  top: 6rem;
+  right: 2rem;
 }
-.sun{
-    color: var(--second-color);
-    font-size: 3.5rem;
+.sun {
+  color: var(--second-color);
+  font-size: 3.5rem;
 }
-.sun:hover{
-    filter: drop-shadow(5px 5px 5px rgba(236, 114, 114, 0.75));
-    scale: 1.1;
+.sun:hover {
+  filter: drop-shadow(5px 5px 5px rgba(236, 114, 114, 0.75));
+  scale: 1.1;
+  transition: all 0.3s;
 }
-.moon{
-    color:black;
-    font-size: 3.5rem;
+.moon {
+  color: black;
+  font-size: 3.5rem;
 }
 .moon:hover {
-    filter: drop-shadow(5px 5px 5px black);
-    scale: 1.1;
+  filter: drop-shadow(5px 5px 5px black);
+  scale: 1.1;
+  transition: all 0.3s;
 }
