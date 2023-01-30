@@ -31,6 +31,7 @@
   font-size: 2rem;
   font-weight: bold;
   color: var(--second-color);
+  transition: all 0.3s;
 }
 .workpopup-close:hover {
   filter: drop-shadow(5px 5px 5px rgba(236, 114, 114, 0.75));
@@ -55,6 +56,7 @@
 }
 .workpopup-img {
   width: 10rem;
+  transition: all 0.3s;
 }
 .workpopup-img.clicked {
   border: 3px solid var(--second-color);
@@ -66,7 +68,7 @@
   padding-top: 2rem;
 }
 .workpopup-img:hover {
-  scale: 1.1;
+  transform: scale(1.1);
 }
 .workpopup-btn {
   display: flex;
