@@ -12,11 +12,10 @@ import "./Navbar.css";
 function Navbar() {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
-  {
-    nav
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "auto");
-  }
+
+  nav
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "auto");
 
   return (
     <header className="navbar">
