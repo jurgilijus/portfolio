@@ -27,7 +27,7 @@ export const workItems = [
     iconII: [appComponent],
     alt: "Comfy house shop page",
     title: "JS Application",
-    hrefDemo: "/",
+    hrefDemo: "https://houseandshop.netlify.app",
     hrefCode: "https://github.com/jurgilijus/Comfyhouse-project.git",
   },
   {
@@ -37,7 +37,7 @@ export const workItems = [
     iconII: "",
     alt: "Modern Navbar",
     title: "JS, HTML and CSS",
-    hrefDemo: "/",
-    hrefCode: "https://github.com/jurgilijus/Comfyhouse-project.git",
+    hrefDemo: "moder-navbar.netlify.app",
+    hrefCode: "https://github.com/jurgilijus/Navbar.git",
   },
 ];
