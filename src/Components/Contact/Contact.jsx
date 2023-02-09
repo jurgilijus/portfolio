@@ -45,12 +45,14 @@ function Contact() {
         <div className="contact-text">
           <h4>Contact</h4>
           <p>
-            Submit the form below or shoot me an email - jurgissubciusgmail.com
+            Submit the form below or shoot me an email - jurgissubcius@gmail.com
           </p>
         </div>
 
         <div className="contact-form">
+          <label htmlFor="name"></label>
           <input
+            id="name"
             className={
               errors.name && touched.name
                 ? "contact-form-inputs input-error"
@@ -67,7 +69,9 @@ function Contact() {
             <p className="error">{errors.name}</p>
           )}
           <br />
+          <label htmlFor="email"></label>
           <input
+            id="email"
             className={
               errors.name && touched.name
                 ? " contact-form-inputs input-error"
@@ -79,12 +83,14 @@ function Contact() {
             type="email"
             placeholder="Enter your email"
             name="email"
-          />{" "}
+          />
           {errors.email && touched.email && (
             <p className="error">{errors.email}</p>
           )}
           <br />
+          <label htmlFor="message"></label>
           <textarea
+            id="message"
             className={
               errors.name && touched.name
                 ? " contact-form-inputs input-error"
@@ -96,13 +102,12 @@ function Contact() {
             placeholder="Enter your text"
             name="message"
             rows="10"
-          />{" "}
+          />
           {errors.message && touched.message && (
             <p className="error">{errors.message}</p>
           )}
           <br />
           <button className="btn btn-aligne" type="submit">
-            {" "}
             Contact me!!!
           </button>
         </div>

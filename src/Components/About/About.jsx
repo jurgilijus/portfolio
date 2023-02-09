@@ -12,12 +12,12 @@ const rightVariant = {
 
 const leftVariant = {
   initial: { x: "0rem", transition: { duration: 0.5 } },
-  animate: { x: "3rem" },
+  animate: { x: "-100%" },
 };
 
 function About() {
   const control = useAnimation();
-  const [ref, inView] = useInView(false);
+  const [ref, inView] = useInView(true);
 
   useEffect(() => {
     inView ? control.start("initial") : control.start("animate");

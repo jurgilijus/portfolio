@@ -6,7 +6,7 @@ import { FaTimes } from "react-icons/fa";
 import "./WorkPopupModal.css";
 
 function WorkPopupModal(props) {
-  const { image, hide, iconI, iconII } = props;
+  const { image, hide, iconI, iconII, hrefDemo, hrefCode } = props;
   const [mainImage, setMainImage] = useState(image);
   const handleImageChange = (e) => {
     setMainImage(e);
@@ -20,7 +20,7 @@ function WorkPopupModal(props) {
             <FaTimes />
           </button>
           <img className="worlpupup-main-img" src={mainImage} alt="" />
-          <div>
+          <div className="img-conteiner">
             <li className="workpopup-imgs">
               <ul onClick={() => handleImageChange(image)}>
                 <img
@@ -45,11 +45,11 @@ function WorkPopupModal(props) {
               </ul>
             </li>
           </div>
-          <div className="workpopup-btn">
-            <a href="/" target="_blank" rel="noreferrer">
+          <div className="workpopup-btns">
+            <a href={hrefDemo} target="_blank" rel="noreferrer">
               <button className="btn">Demo</button>
             </a>
-            <a href="/" target="_blank" rel="noreferrer">
+            <a href={hrefCode} target="_blank" rel="noreferrer">
               <button className="btn">Code</button>
             </a>
           </div>

@@ -74,7 +74,7 @@ function Navbar() {
               smooth={true}
               duration={500}
             >
-              Email <HiOutlineMail size={30} />
+              Email <HiOutlineMail className="icon-size" />
             </Link>
           </li>
         </ul>

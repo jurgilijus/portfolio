@@ -22,26 +22,36 @@ function Work() {
 
   const [workModal, setWorkModal] = useState(false);
   const [workData, setWorkData] = useState([]);
-  const getWorkData = (image, iconI, iconII) => {
-    let tempData = [image, iconI, iconII];
+  const getWorkData = (image, iconI, iconII, hrefDemo, hrefCode) => {
+    let tempData = [image, iconI, iconII, hrefDemo, hrefCode];
     setWorkData((item) => [1, ...tempData]);
+
     return setWorkModal(true);
   };
+
   return (
     <section name="work" className="work">
       <h4>Work</h4>
       <p className="work-p">Check out some of my recent work</p>
-      <div className="work-items">
+      <motion.div
+        ref={ref}
+        variants={showVariant}
+        initial="hidden"
+        animate={control}
+        className="work-items"
+      >
         {workItems.map((workItem) => (
-          <motion.div
-            ref={ref}
-            variants={showVariant}
-            initial="hidden"
-            animate={control}
+          <div
             key={workItem.id}
             className="work-conteiner"
             onClick={() =>
-              getWorkData(workItem.image, workItem.iconI, workItem.iconII)
+              getWorkData(
+                workItem.image,
+                workItem.iconI,
+                workItem.iconII,
+                workItem.hrefDemo,
+                workItem.hrefCode
+              )
             }
           >
             <img
@@ -63,19 +73,21 @@ function Work() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
         {workModal === true ? (
           <WorkPopupModal
             image={workData[1]}
             iconI={workData[2]}
             iconII={workData[3]}
+            hrefDemo={workData[4]}
+            hrefCode={workData[5]}
             hide={() => setWorkModal(false)}
           />
         ) : (
           ""
         )}
-      </div>
+      </motion.div>
     </section>
   );
 }

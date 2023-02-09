@@ -79,3 +79,8 @@
     min-width: 75%;
   }
 }
+@media only screen and (max-width: 280px) {
+  .popup-icon {
+    display: none;
+  }
+}

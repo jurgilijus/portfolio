@@ -55,7 +55,6 @@
   list-style: none;
 }
 .workpopup-img {
-  width: 10rem;
   transition: all 0.3s;
 }
 .workpopup-img.clicked {
@@ -70,16 +69,26 @@
 .workpopup-img:hover {
   transform: scale(1.1);
 }
-.workpopup-btn {
+.workpopup-btns {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 3rem;
-  gap: 2rem;
+  gap: 1.25rem;
 }
 .clicked {
   border: 3px solid var(--second-color);
 }
 .empty {
   display: none;
+}
+@media (max-width: 540px) {
+  .workpopup-img {
+    height: 5rem;
+  }
+}
+@media (max-width: 400px) {
+  .workpopup-img {
+    height: 2.5rem;
+  }
 }

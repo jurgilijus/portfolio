@@ -17,7 +17,7 @@ export const workItems = [
     iconII: [search],
     alt: "Food-app main page image",
     title: "React JS Application",
-    hrefDemo: "/",
+    hrefDemo: "https://maistas.netlify.app",
     hrefCode: "https://github.com/jurgilijus/food-app.git",
   },
   {
@@ -37,5 +37,7 @@ export const workItems = [
     iconII: "",
     alt: "Modern Navbar",
     title: "JS, HTML and CSS",
+    hrefDemo: "/",
+    hrefCode: "https://github.com/jurgilijus/Comfyhouse-project.git",
   },
 ];
