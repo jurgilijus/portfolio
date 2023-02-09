@@ -37,7 +37,7 @@ export const workItems = [
     iconII: "",
     alt: "Modern Navbar",
     title: "JS, HTML and CSS",
-    hrefDemo: "moder-navbar.netlify.app",
+    hrefDemo: "https://modernavbar.netlify.app/",
     hrefCode: "https://github.com/jurgilijus/Navbar.git",
   },
 ];
