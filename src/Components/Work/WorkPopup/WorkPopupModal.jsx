@@ -6,7 +6,7 @@ import { FaTimes } from "react-icons/fa";
 import "./WorkPopupModal.css";
 
 function WorkPopupModal(props) {
-  const { image, hide, iconI, iconII, hrefDemo, hrefCode } = props;
+  const { image, hide, iconI, iconII, hrefDemo, hrefCode, description } = props;
   const [mainImage, setMainImage] = useState(image);
   const handleImageChange = (e) => {
     setMainImage(e);
@@ -53,6 +53,7 @@ function WorkPopupModal(props) {
               <button className="btn">Code</button>
             </a>
           </div>
+          <p className="description">{description}</p>
         </div>
       </div>
     </>,

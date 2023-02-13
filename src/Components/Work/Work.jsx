@@ -22,8 +22,15 @@ function Work() {
 
   const [workModal, setWorkModal] = useState(false);
   const [workData, setWorkData] = useState([]);
-  const getWorkData = (image, iconI, iconII, hrefDemo, hrefCode) => {
-    let tempData = [image, iconI, iconII, hrefDemo, hrefCode];
+  const getWorkData = (
+    image,
+    iconI,
+    iconII,
+    hrefDemo,
+    hrefCode,
+    description
+  ) => {
+    let tempData = [image, iconI, iconII, hrefDemo, hrefCode, description];
     setWorkData((item) => [1, ...tempData]);
 
     return setWorkModal(true);
@@ -50,7 +57,8 @@ function Work() {
                 workItem.iconI,
                 workItem.iconII,
                 workItem.hrefDemo,
-                workItem.hrefCode
+                workItem.hrefCode,
+                workItem.description
               )
             }
           >
@@ -82,6 +90,7 @@ function Work() {
             iconII={workData[3]}
             hrefDemo={workData[4]}
             hrefCode={workData[5]}
+            description={workData[6]}
             hide={() => setWorkModal(false)}
           />
         ) : (

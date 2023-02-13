@@ -79,6 +79,10 @@
 .clicked {
   border: 3px solid var(--second-color);
 }
+.description {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 .empty {
   display: none;
 }

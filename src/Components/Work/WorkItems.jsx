@@ -5,6 +5,9 @@ import mainPage from "../../Assets/comfy-house/mainpage.PNG";
 import app from "../../Assets/comfy-house/products.PNG";
 import appComponent from "../../Assets/comfy-house/shopingcart.PNG";
 import moderNav from "../../Assets/ModernNav/modernNav.PNG";
+import noteForm from "../../Assets/noteApp/noteForm.PNG";
+import loginForm from "../../Assets/noteApp/loginForm.PNG";
+import note from "../../Assets/noteApp/note.png";
 
 // CSS
 import "./Work.css";
@@ -19,6 +22,8 @@ export const workItems = [
     title: "React JS Application",
     hrefDemo: "https://maistas.netlify.app",
     hrefCode: "https://github.com/jurgilijus/food-app.git",
+    description:
+      "This is food web app. Which you can search some interesting food recipes.",
   },
   {
     id: 2,
@@ -29,6 +34,7 @@ export const workItems = [
     title: "JS Application",
     hrefDemo: "https://houseandshop.netlify.app",
     hrefCode: "https://github.com/jurgilijus/Comfyhouse-project.git",
+    description: "This is furniture web-store front side stile example.",
   },
   {
     id: 3,
@@ -39,5 +45,17 @@ export const workItems = [
     title: "JS, HTML and CSS",
     hrefDemo: "https://modernavbar.netlify.app/",
     hrefCode: "https://github.com/jurgilijus/Navbar.git",
+    description: "This is a modern navbar example with some animation.",
+  },
+  {
+    id: 4,
+    image: [noteForm],
+    iconI: [loginForm],
+    iconII: [note],
+    alt: "Note app",
+    title: "Note app",
+    hrefDemo: "https://notys.netlify.app",
+    hrefCode: "https://github.com/jurgilijus/note-App.git",
+    description: "This is note app example for project teams.",
   },
 ];
