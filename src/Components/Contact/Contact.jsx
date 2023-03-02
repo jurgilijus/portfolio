@@ -10,23 +10,29 @@ function Contact() {
 
   const sendEmail = async (e) => {
     e.preventDefault();
-    // const serviceId = REACT_APP_YOUR_SERVICE_ID
-    emailjs
-      .sendForm(
-        "service_uj608wv",
-        "template_43naxb1",
-        form.current,
-        "aIt8uauSZSCSwJ9It"
-      )
-      .then(
-        () => {
-          alert("Your message has been sent");
-        },
-        (error) => {
-          alert(error.message);
-        }
-      );
-    resetForm();
+    if (
+      values.name.length &&
+      values.email.length &&
+      values.message.length !== 0
+    ) {
+      emailjs
+        .sendForm(
+          "service_uj608wv",
+          "template_43naxb1",
+          form.current,
+          "aIt8uauSZSCSwJ9It"
+        )
+        .then(
+          () => {
+            alert("Your message has been sent");
+          },
+          (error) => {
+            alert(error.message);
+          }
+        );
+      resetForm();
+    }
+    return;
   };
 
   const { values, resetForm, errors, touched, handleBlur, handleChange } =
@@ -38,7 +44,6 @@ function Contact() {
       },
       validationSchema: contactSchema,
     });
-
   return (
     <section name="contact" className="contact">
       <form ref={form} onSubmit={sendEmail} id="Form" action="">
