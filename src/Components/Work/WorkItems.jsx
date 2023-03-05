@@ -8,6 +8,9 @@ import moderNav from "../../Assets/ModernNav/modernNav.PNG";
 import noteForm from "../../Assets/noteApp/noteForm.PNG";
 import loginForm from "../../Assets/noteApp/loginForm.PNG";
 import note from "../../Assets/noteApp/note.png";
+import home from "../../Assets/ableton/home.png";
+import latest from "../../Assets/ableton/latest.PNG";
+import footer from "../../Assets/ableton/footer.PNG";
 
 // CSS
 import "./Work.css";
@@ -57,5 +60,16 @@ export const workItems = [
     hrefDemo: "https://notys.netlify.app",
     hrefCode: "https://github.com/jurgilijus/note-App.git",
     description: "This is note app example for project teams.",
+  },
+  {
+    id: 5,
+    image: [home],
+    iconI: [latest],
+    iconII: [footer],
+    alt: "Ableton clone project",
+    title: "Ableton",
+    hrefDemo: "https://ableton-project.netlify.app/",
+    hrefCode: "https://github.com/jurgilijus/ableton.git",
+    description: "This is Ableton Website clone",
   },
 ];
