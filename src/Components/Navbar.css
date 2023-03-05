@@ -91,6 +91,7 @@ li {
   font-size: 3rem;
   z-index: 10;
   cursor: pointer;
+  padding: 0rem 1rem;
 }
 @media (min-width: 768px) {
   .hamburger-btn,
