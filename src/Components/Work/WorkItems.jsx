@@ -11,6 +11,7 @@ import note from "../../Assets/noteApp/note.png";
 import home from "../../Assets/ableton/home.png";
 import latest from "../../Assets/ableton/latest.PNG";
 import footer from "../../Assets/ableton/footer.PNG";
+import onePlusHomeScreen from "../../Assets/onePlus5T/homeScreen.PNG";
 
 // CSS
 import "./Work.css";
@@ -71,5 +72,16 @@ export const workItems = [
     hrefDemo: "https://ableton-project.netlify.app/",
     hrefCode: "https://github.com/jurgilijus/ableton.git",
     description: "This is Ableton Website clone",
+  },
+  {
+    id: 6,
+    image: [onePlusHomeScreen],
+    iconI: "",
+    iconII: "",
+    alt: "OnePlus5T",
+    title: "OnePlus5T phone visual copy",
+    hrefDemo: "https://oneplus-project.netlify.app/",
+    hrefCode: "https://github.com/jurgilijus/oneplus5T.git",
+    description: "This is OnePlus5T phone visual copy, created with reactjs",
   },
 ];
