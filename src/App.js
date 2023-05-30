@@ -22,7 +22,6 @@ function App() {
 
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
-
   return (
     <>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
