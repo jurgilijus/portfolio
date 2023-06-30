@@ -17,10 +17,10 @@ function Contact() {
     ) {
       emailjs
         .sendForm(
-          `${process.env.REACT_APP_SERVICE}`,
-          `${process.env.REACT_APP_template}`,
+          "service_51h8k5p",
+          "template_43naxb1",
           form.current,
-          `${process.env.REACT_APP_aI}`
+          "aIt8uauSZSCSwJ9It"
         )
         .then(
           () => {
